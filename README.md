@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <img width="1280" alt="Almost Reddit - 571x238" src="https://github.com/user-attachments/assets/63852be8-e898-4403-a0c0-1f3b77c54169">
 
 # Building Almost Reddit
@@ -90,3 +91,7 @@ promise.then(function (response) {
 ```
 
 We hope you enjoy using "Building Almost Reddit" as much as we enjoyed creating it. Your feedback and contributions are welcome! Happy coding!
+=======
+# almost-reddit
+Implemented almost reddit app features including authentication with github, discord, anonymous login and databases and more 
+>>>>>>> origin/main
