@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import Loader from '../components/Loader';
+import React, { createContext, useContext, useState, useEffect } from "react";
+import Loader from "../components/Loader";
+import { account } from "./appwrite";
 
 const UserContext = createContext();
 
@@ -12,9 +13,12 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        setTimeout(() => {
-          setUser({ email: 'test@test.com' });
-        }, 2000);
+        // setTimeout(() => {
+        //   setUser({ email: 'test@test.com' });
+        // }, 2000);
+        //get account data
+        const accountData = await account.get();
+        setUser(accountData);
       } catch (error) {
         setUser(null);
       } finally {
@@ -26,7 +30,7 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   if (loading) {
-    return <Loader /> // Replace with your loading spinner/component
+    return <Loader />; // Replace with your loading spinner/component
   }
 
   return (
